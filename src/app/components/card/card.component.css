@@ -1,0 +1,7 @@
+button {
+    width: 300px;
+    height: 200px;
+    border-radius: 50px 20px;
+    font-size: 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
