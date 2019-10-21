@@ -1,1 +1,33 @@
-<p>main works!</p>
+<div class = "mains">
+    <div class = "selectionColumn">
+            <mat-form-field class="parameterComponents">
+                    <mat-label>Minimum Date</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="parameterComponents">
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a minimum date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+    </div> 
+</div>
+<!-- <mat-form-field class="searchBar">
+            <input matInput placeholder="Favorite food" value="">
+        </mat-form-field> -->
+
+  <!-- <div class = "selectionColumn">
+        <app-card [triviaValue] = 400 class= "individualSelections"></app-card>  
+        <app-card [triviaValue] = 300 class= "individualSelections"></app-card>
+    </div>
+    <div class = "selectionColumn">
+        <app-card [triviaValue] = 400 class= "individualSelections"></app-card>  
+        <app-card [triviaValue] = 300 class= "individualSelections"></app-card>
+    </div>   -->
+
+

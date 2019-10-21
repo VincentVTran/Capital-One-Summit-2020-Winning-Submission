@@ -1,0 +1,31 @@
+.mains {
+    height: 100vh;
+    background-color: rgb(161, 123, 250);
+    background-image: linear-gradient(to bottom, rgba(61, 55, 141, 0.6), transparent);
+	color: #eee;
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.selectionColumn {
+    flex-direction: column;
+    display: flex;
+    float:left;
+    padding-top: 50px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+
+.parameterComponents {
+    font-size: 30px;
+    width: 500px;
+}
+
+.individualSelections{
+    text-align: center;
+}
