@@ -1,26 +1,3 @@
 <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-        <mat-panel-title>
-            Self aware panel
-        </mat-panel-title>
-        <mat-panel-description>
-            {{panelOpenState ? 'Open' : 'Close'}}
-        </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-        <mat-panel-title>
-            Self aware panel
-        </mat-panel-title>
-        <mat-panel-description>
-            {{panelOpenState ? 'Open' : 'Close'}}
-        </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
+    <app-resultdisplay *ngFor="let data of resultData" [question] = "data.question" [answer] = "data.answer" [category] = "data.category_id" [triviaValue] = "data.value" [date] = "data.airdate"></app-resultdisplay>
 </mat-accordion>

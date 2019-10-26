@@ -1,1 +1,11 @@
-<p>start works!</p>
+<div class = "titleContainer">
+    <h1>Troogle</h1>
+    <h4>Trivia questions search engine</h4>
+</div>
+<div class = "searchContainer">
+    <mat-form-field class="searchBar">
+        <input matInput placeholder="Category Search" [(ngModel)]="keyword" value="">
+    </mat-form-field>
+    <button mat-raised-button color="primary" routerLink="/categories/{{keyword}}">Search</button>
+</div>
+

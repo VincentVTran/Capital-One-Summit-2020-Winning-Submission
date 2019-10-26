@@ -1,0 +1,27 @@
+.searchContainer {
+    position: fixed;
+    top: 50%;
+    left: 39%;
+}
+.searchBar {
+    margin-top: 10%;
+    font-size: 30px;
+    width: 500px;
+}
+.titleContainer{
+    height: 60%; 
+    text-align:center; 
+    display:table;
+    width:100%;
+}
+
+.titleContainer h1 {
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 60px;
+}
+.titleContainer h4 {
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 30px;
+}

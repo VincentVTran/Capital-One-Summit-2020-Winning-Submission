@@ -1,0 +1,18 @@
+<mat-expansion-panel class = "main" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+        <mat-panel-title class = "title">
+            Points: {{triviaValue}} <br>
+        </mat-panel-title>
+        <mat-panel-title>
+            Category: {{category}} <br>
+            Question: {{question}}
+        </mat-panel-title>
+        <mat-panel-title>
+            Air Date: {{date}} <br>
+        </mat-panel-title>
+        <mat-panel-description>
+            {{panelOpenState ? 'Open' : 'Close'}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Answer: {{answer}}</p>
+</mat-expansion-panel>

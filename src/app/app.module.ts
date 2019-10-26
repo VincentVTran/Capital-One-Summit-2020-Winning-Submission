@@ -10,8 +10,13 @@ import { ResultComponent } from './pages/result/result.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule,MatDatepickerModule,MatNativeDateModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { ResultdisplayComponent } from './components/resultdisplay/resultdisplay.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoriesComponent } from './pages/categories/categories.component'
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +24,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MainComponent,
     StartComponent,
     ResultComponent,
+    ResultdisplayComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FormsModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatListModule
     
   ],
   providers: [],

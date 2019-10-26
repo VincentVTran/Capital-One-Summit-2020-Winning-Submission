@@ -1,19 +1,34 @@
 <div class = "mains">
     <div class = "selectionColumn">
             <mat-form-field class="parameterComponents">
-                    <mat-label>Minimum Date</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                        {{food.viewValue}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
+                <mat-label>Category</mat-label>
+                <mat-select [(ngModel)]="categorySelected">
+                    <mat-option *ngFor="let category of categories" [value]="category.value">
+                        {{category.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
 
-                <mat-form-field class="parameterComponents">
-                        <input matInput [matDatepicker]="picker" placeholder="Choose a minimum date">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
+            <mat-form-field class="parameterComponents">
+                    <input matInput [(ngModel)]="min" [matDatepicker]="minDate" placeholder="Choose a minimum date">
+                    <mat-datepicker-toggle matSuffix [for]="minDate"></mat-datepicker-toggle>
+                    <mat-datepicker #minDate></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="parameterComponents">
+                <input matInput [(ngModel)]="max" [matDatepicker]="maxDate" placeholder="Maximum date">
+                <mat-datepicker-toggle matSuffix [for]="maxDate"></mat-datepicker-toggle>
+                <mat-datepicker #maxDate></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="parameterComponents">
+                <mat-label>Points</mat-label>
+                <mat-select [(ngModel)]="pointsSelected">
+                    <mat-option *ngFor="let point of points" [value]="point.value">
+                        {{point.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
 
     </div> 
 </div>
