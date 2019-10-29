@@ -11,6 +11,7 @@ export class ResultdisplayComponent implements OnInit {
   @Input() category: any;
   @Input() date: any;
   @Input() triviaValue: Number;
+  panelOpenState:any ;
   constructor() { }
 
   ngOnInit() {
