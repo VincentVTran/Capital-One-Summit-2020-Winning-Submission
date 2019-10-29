@@ -9,7 +9,7 @@ import { Observable } from 'rxjs'
 //http://jservice.io/popular/18418
 export class DataService {
 
-  private baseURL:string = "jservice.io"
+  private baseURL:string = "http://jservice.io"
   public dataResult: any;
   public currentIndex: string;
   public category:any = [];
