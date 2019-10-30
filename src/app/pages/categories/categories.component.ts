@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '../../core/data.service';
 import {Location}  from '@angular/common';
+
 import { Router, ActivatedRoute, Params, Data } from '@angular/router';
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css']
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesComponent implements OnInit,OnDestroy{
   resultCategory: any = [
     {
       // "id": 11605,
@@ -22,11 +23,16 @@ export class CategoriesComponent implements OnInit {
     this.dataService.currentIndex = this.pageIndex.toString();
   }
   click(id){
-    console.log(id);
+    this.router.navigate(["/result/"+id])
   }
   ngOnInit() {
     this.dataService.getCategories(this.route.snapshot.params['keyword']);
     this.resultCategory = this.dataService.category;
+    //console.log(this.resultCategory);
+  }
+  ngOnDestroy() {
+    this.dataService.category = [];
+    this.resultCategory = [];
     //console.log(this.resultCategory);
   }
 

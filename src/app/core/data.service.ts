@@ -12,7 +12,9 @@ export class DataService {
   private baseURL:string = "http://www.jservice.io"
   public dataResult: any;
   public currentIndex: string;
+  public currentIndex2: string;
   public category:any = [];
+  public clues:any = [];
   constructor(private http: HttpClient) {
   }
 
@@ -21,7 +23,10 @@ export class DataService {
       let params = new HttpParams();
       params = params.append('count', '100');
       params = params.append('offset', this.currentIndex);
-      let dataGet = await this.http.get<any>(this.baseURL+"/api/categories",{params:params})
+      let dataGet = await this.http.get<any>(this.baseURL+"/api/categories",{params:params});
+      if(parseInt(this.currentIndex)>12000){
+        return;
+      }
       await dataGet.subscribe(
         (data) => {
           for(var i=0;i<data.length;i++){
@@ -29,12 +34,15 @@ export class DataService {
               if(data[i].title.includes(categoryKeyWord) && this.category.length<101){
                 this.category.push(data[i])
               }
+              else{
+                break;
+              }
             }
             catch(e){
 
             }
           }
-          console.log(this.currentIndex);
+          console.log("Pagination index: " + this.currentIndex);
           let newIndex = parseInt(this.currentIndex)+99;
           this.currentIndex = newIndex.toString();
           if(this.category.length<25){
@@ -45,8 +53,50 @@ export class DataService {
       );
   }
 
-  async getClues(value,category,min_date,max_date,offset){
+  async getClues(category,value,min_date,max_date){
+    var param2 = new HttpParams();
+    var currentIndex = "0";
+    if(value != null){
+      param2 = param2.append('value', value);
+    }
+    if(min_date != null){
+      param2 = param2.append('min_date', min_date);
+    }
+    
+    if(max_date != null){
+      param2 = param2.append('max_date', max_date);
+    }
+    param2 = param2.append('category', category);
+    param2 = param2.append('offset', this.currentIndex2);
+
     // params = params.append('var2', val2);
+    let dataGet = await this.http.get<any>(this.baseURL+"/api/clues",{params:param2});
+    if(parseInt(this.currentIndex2)>12000){
+      return;
+    }
+    await dataGet.subscribe(
+      (data) => {
+        for(var i=0;i<data.length;i++){
+          if(this.clues.length>101){
+            break;
+          }
+          try{
+            if(this.clues.length<101){
+              this.clues.push(data[i])
+            }
+          }
+          catch(e){
+          }
+        }
+        console.log("Pagination index: " + this.currentIndex2);
+        let newIndex = parseInt(this.currentIndex2)+99;
+        this.currentIndex = newIndex.toString();
+        if(this.clues.length<25){
+          this.getClues(category,value,min_date,max_date)
+        }
+        // console.log(this.category)
+      }  
+    );
     
   }
 }

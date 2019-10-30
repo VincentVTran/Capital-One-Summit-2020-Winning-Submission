@@ -8,7 +8,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 const routes: Routes = [
   { path:'categories/:keyword', component: CategoriesComponent, data: {type: 'keyword'}},
   { path:'filter', component: MainComponent},
-  { path:'result', component: ResultComponent},
+  { path:'result/:categoryID', component: ResultComponent},
   { path:'start', component: StartComponent},
   { path:'', redirectTo: '/start', pathMatch:'full'},
 ];
