@@ -9,7 +9,7 @@ import { Observable } from 'rxjs'
 //http://jservice.io/popular/18418
 export class DataService {
 
-  private baseURL:string = "http://www.jservice.io"
+  private baseURL:string = "https://cors-anywhere.herokuapp.com/http://jservice.io/"
   public dataResult: any;
   public currentIndex: string;
   public currentIndex2: string;
