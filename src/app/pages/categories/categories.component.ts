@@ -10,9 +10,9 @@ import { Router, ActivatedRoute, Params, Data } from '@angular/router';
 export class CategoriesComponent implements OnInit {
   resultCategory: any = [
     {
-      "id": 11605,
-      "title": "classical works' other names",
-      "clues_count": 5
+      // "id": 11605,
+      // "title": "classical works' other names",
+      // "clues_count": 5
     }
   ];
 
