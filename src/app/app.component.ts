@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   ngOnInit(){
-    particlesJS.load('particles-js', '../assets/particles.json', function() { console.log('callback - particles.js config loaded'); });
+    //particlesJS.load('particles-js', '../assets/particles.json', function() { console.log('callback - particles.js config loaded'); });
   }
 
 }
