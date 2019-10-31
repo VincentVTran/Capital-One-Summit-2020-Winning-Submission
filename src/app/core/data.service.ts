@@ -23,7 +23,7 @@ export class DataService {
       let params = new HttpParams();
       params = params.append('count', '100');
       params = params.append('offset', this.currentIndex);
-      let dataGet = await this.http.get<any>(this.baseURL+"/api/categories",{params:params, headers: {'accepts':'application/json'}});
+      let dataGet = await this.http.get<any>(this.baseURL+"/api/categories",{params:params});
       if(parseInt(this.currentIndex)>12000){
         return;
       }
