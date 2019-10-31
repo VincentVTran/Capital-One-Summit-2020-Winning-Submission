@@ -92,7 +92,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/particles.js/particles.js"]
           }
         },
         "lint": {
