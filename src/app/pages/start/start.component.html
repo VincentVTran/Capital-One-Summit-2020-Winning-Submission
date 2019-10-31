@@ -1,0 +1,17 @@
+<div class = "titleContainer">
+    <h1>Troogle</h1>
+    <h4>Trivia questions search engine</h4>
+</div>
+<div class = "mains">
+    <mat-spinner *ngIf="loading === true" class='loadingIcon'></mat-spinner>
+    <mat-form-field class="parameterComponents">
+        <mat-label class = "dropDownList" >Select a category</mat-label>
+        <mat-select class = "dropDownList" [(ngModel)]="categorySelected">
+            <mat-option *ngFor="let category of categoryOptions" [value]="category.id">
+                {{category.title}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field><br>
+    <button mat-raised-button color="primary" (click)="click()">Search</button>
+</div>
+

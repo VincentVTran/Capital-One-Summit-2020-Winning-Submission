@@ -1,0 +1,66 @@
+.searchContainer {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+}
+.searchBar {
+    margin-top: 10%;
+    font-size: 30px;
+}
+.parameterComponents{
+    font-size:40px;
+    width: 500px;
+}
+.titleContainer{
+    margin-top: 20%;
+    height: 100%; 
+    text-align:center; 
+    width:100%;
+}
+
+.titleContainer h1 {
+    /* vertical-align:middle; */
+    font-size: 60px;
+}
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/quicksand/v19/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-xDwxUD2GFw.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.dropDownList {
+    font-size: 20px;
+}
+.textColorOrange {
+    background-color: rgb(49, 37, 22);
+    background-image: linear-gradient(to bottom, rgba(218, 134, 0, 0.6), transparent);
+    color:transparent;
+    font-size: 30px;
+    background-clip: text;
+}
+.titleContainer h4 {
+    /* vertical-align:middle; */
+    font-family: 'Quicksand', 'sans-serif';
+    font-size: 30px;
+}
+
+.mains
+{
+     padding: 30px;
+     text-align: center;
+}
+
+.loadingIcon{
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
