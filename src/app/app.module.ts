@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
-import { MainComponent } from './pages/main/main.component';
 import { StartComponent } from './pages/start/start.component';
 import { ResultComponent } from './pages/result/result.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,17 +14,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ResultdisplayComponent } from './components/resultdisplay/resultdisplay.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CategoriesComponent } from './pages/categories/categories.component'
 import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    MainComponent,
     StartComponent,
     ResultComponent,
     ResultdisplayComponent,
-    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

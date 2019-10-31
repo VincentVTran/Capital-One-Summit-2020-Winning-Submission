@@ -1,11 +1,20 @@
 <div class = "titleContainer">
     <h1>Troogle</h1>
-    <h4>Trivia questions search engine</h4>
+    <h4>Trivia questions search engine</h4>>
 </div>
-<div class = "searchContainer">
-    <mat-form-field class="searchBar">
-        <input matInput placeholder="Category Search" [(ngModel)]="keyword" value="">
-    </mat-form-field>
-    <button mat-raised-button color="primary" routerLink="/categories/{{keyword}}">Search</button>
+
+<!-- <div>
+        <h2 class = "textColorOrange">Halloween Edition</h2>
+</div> -->
+<div class = "mains">
+    <mat-form-field class="parameterComponents">
+        <mat-label class = "dropDownList" >Select a category</mat-label>
+        <mat-select class = "dropDownList" [(ngModel)]="categorySelected">
+            <mat-option *ngFor="let category of categoryOptions" [value]="category.id">
+                {{category.title}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field><br>
+    <button mat-raised-button color="primary" (click)="click()">Search</button>
 </div>
 
