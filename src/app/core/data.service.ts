@@ -9,7 +9,7 @@ import { Observable } from 'rxjs'
 //http://jservice.io/popular/18418
 export class DataService {
 
-  private baseURL:string = "https://cors-anywhere.herokuapp.com/http://jservice.io"
+  private baseURL:string = "http://jservice.io"
   public dataResult: any;
   public currentIndex: string;
   public currentIndex2: string;
@@ -23,7 +23,7 @@ export class DataService {
       let params = new HttpParams();
       params = params.append('count', '100');
       params = params.append('offset', this.currentIndex);
-      let dataGet = await this.http.get<any>(this.baseURL+"/api/categories",{params:params});
+      let dataGet = await this.http.get<any>(this.baseURL+"/api/categories",{params:params, headers: {'accepts':'application/json'}});
       if(parseInt(this.currentIndex)>12000){
         return;
       }
@@ -77,9 +77,6 @@ export class DataService {
     await dataGet.subscribe(
       (data) => {
         for(var i=0;i<data.length;i++){
-          if(this.clues.length>101){
-            break;
-          }
           try{
             if(this.clues.length<101){
               this.clues.push(data[i])
