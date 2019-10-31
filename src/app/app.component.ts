@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { slider,} from '../route-animations'
+import { slider,} from '../route-animations';
+
+declare var particlesJS: any; 
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,15 @@ import { slider,} from '../route-animations'
     slider
   ]
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit {
   title = 'Trivia';
-  
+
   prepareRoute(outlet: RouterOutlet){
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
+  ngOnInit(){
+    particlesJS.load('particles-js', '../assets/particles.json', function() { console.log('callback - particles.js config loaded'); });
+  }
+
 }

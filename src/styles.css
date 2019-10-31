@@ -12,5 +12,11 @@ body {
     flex-direction: row;
     justify-content: center;
 }
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

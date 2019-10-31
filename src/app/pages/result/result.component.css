@@ -11,6 +11,9 @@ mat-form-field {
 button {
     margin-left: 20px;
 }
+.parameterComponents {
+    font-size:15px;
+}
 
 .loadingIcon{
     position: fixed;

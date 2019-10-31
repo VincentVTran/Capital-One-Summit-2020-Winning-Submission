@@ -24,6 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.1",
     "components": "^0.1.0",
     "ngx-build-plus": "^8.1.5",
+    "particles.js": "^2.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

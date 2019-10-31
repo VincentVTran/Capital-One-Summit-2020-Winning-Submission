@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../core/data.service';
-import { Router, ActivatedRoute, Params, Data } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',

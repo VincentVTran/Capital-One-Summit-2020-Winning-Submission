@@ -3,6 +3,7 @@
     top: 50%;
     left: 40%;
 }
+
 .searchBar {
     margin-top: 10%;
     font-size: 30px;
@@ -12,8 +13,8 @@
     width: 500px;
 }
 .titleContainer{
-    margin-top: 20%;
-    height: 100%; 
+    /* margin-top: 20%; */
+    /* height: 100%;  */
     text-align:center; 
     width:100%;
 }
