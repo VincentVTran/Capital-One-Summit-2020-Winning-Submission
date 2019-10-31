@@ -16,6 +16,23 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
 
+  async getClues(category,value,min_date,max_date){
+    var param2 = new HttpParams();
+    if(value != null){
+      param2 = param2.append('value', value);
+    }
+    if(min_date != null){
+      param2 = param2.append('min_date', min_date);
+    }
+    
+    if(max_date != null){
+      param2 = param2.append('max_date', max_date);
+    }
+
+    param2 = param2.append('category', category);
+    // params = params.append('var2', val2);
+    return this.http.get<any>(this.baseURL+"/api/clues",{params:param2});
+  }
   // async getCategories(categoryKeyWord){
   //   // params = params.append('var2', val2);
   //     let params = new HttpParams();
@@ -51,22 +68,4 @@ export class DataService {
   //     );
   // }
 
-  async getClues(category,value,min_date,max_date){
-    var param2 = new HttpParams();
-    if(value != null){
-      param2 = param2.append('value', value);
-    }
-    if(min_date != null){
-      param2 = param2.append('min_date', min_date);
-    }
-    
-    if(max_date != null){
-      param2 = param2.append('max_date', max_date);
-    }
-
-    param2 = param2.append('category', category);
-
-    // params = params.append('var2', val2);
-    return this.http.get<any>(this.baseURL+"/api/clues",{params:param2});
-  }
 }
