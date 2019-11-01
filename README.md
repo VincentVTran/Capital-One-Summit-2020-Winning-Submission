@@ -1,4 +1,4 @@
-# Troogle (Trivia + Google) ###Capital One Summit 2020
+# Troogle (Trivia + Google) ### Capital One Summit 2020
 
 ## About
 This application is essentially a search engine that allows a user to search through questions that were once used in the show "Jeopardy". Some filtering options available for the user includes the airdate, question value, and category.
