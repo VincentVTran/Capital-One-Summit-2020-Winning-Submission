@@ -32,7 +32,8 @@ Handles all the HTTP request
 ## Technical Skills Incorporated Throughout the Project
 - Use of linear algorithms
 - Understanding of the relationship between HTTP and HTTPs
-- Deployment Procedure
+- Deployment Protocol
 - Use of dependencies
+- HTML,CSS, and JavaScript
 
 
