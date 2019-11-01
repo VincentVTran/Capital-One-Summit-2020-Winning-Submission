@@ -9,3 +9,30 @@ Front End: <br>
 
 Back End: <br>
 - JService API
+
+## Project Key Architect
+
+```bash
+├── app
+│   ├── Components
+│   ├── Pages   
+│   └── Core    
+└── package.json
+```
+
+#### Components
+Stores all the individual 'pieces' on the page (Cards, Results, etc.)
+
+#### Pages
+Are a group of collections that are usually routed (Main menu, result screen, etc.)
+
+#### Core
+Handles all the HTTP request
+
+## Technical Skills Incorporated Throughout the Project
+- Use of linear algorithms
+- Understanding of the relationship between HTTP and HTTPs
+- Deployment Procedure
+- Use of dependencies
+
+
