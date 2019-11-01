@@ -1,7 +1,7 @@
 # Troogle (Trivia + Google)
 
 ## About
-This application is essentially a search engine that allows a user to search through jeopardy questions. Some options available that the user could filter out is the airdate, question value, and category.
+This application is essentially a search engine that allows a user to search through questions that were once used in the show "Jeopardy". Some filtering options available for the user includes the airdate, question value, and category.
 
 ## Frameworks Used
 Front End: <br>
